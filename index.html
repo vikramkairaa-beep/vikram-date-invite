@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>A Little Surprise 💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- Looks like the email they receive -->
+  <section class="mail-screen active" id="mailScreen">
+    <div class="mail-top"><span>‹</span><b>Open pls</b><span>⋮</span></div>
+    <div class="mail-tools"><span>⌫</span><span>!</span><span>▢</span><span>✉</span><span>↗</span><span>⋮</span></div>
+    <div class="mail-subject">Open pls 💌</div>
+    <div class="sender">
+      <div class="avatar">💗</div>
+      <div><strong>Someone special</strong><span>&lt;hello@example.com&gt;</span><small>to me ▾</small></div>
+    </div>
+    <div class="mail-body">
+      <p>Hey you,</p>
+      <p>I made something for you.</p>
+      <p>open this <button class="link" onclick="openInvite()">little surprise</button></p>
+      <p>:) 💗</p>
+    </div>
+    <div class="mail-actions"><button>↩ Reply</button><button>↪ Forward</button></div>
+  </section>
+
+  <!-- YES / NO -->
+  <section class="card" id="screen1">
+    <div class="icon-box">💗</div>
+    <p class="eyebrow">one tiny question...</p>
+    <h1>Will you go on a date with me? 🥹</h1>
+    <p class="sub">Choose carefully... there may be a little surprise. 😌</p>
+    <div class="choice-area" id="choiceArea">
+      <button class="yes-btn" onclick="sayYes()">YES 💗</button>
+      <button class="no-btn" id="noBtn">NO 😭</button>
+    </div>
+    <p class="hint" id="hint">Try clicking NO 👀</p>
+  </section>
+
+  <!-- DATE -->
+  <section class="card" id="screen2">
+    <div class="tiny-icon">📅 🐾</div>
+    <p class="eyebrow">okay, it's official</p>
+    <h1>So... when are you free?</h1>
+    <label for="date">Pick a Day 📅</label>
+    <input id="date" type="date">
+    <label for="time">What Time? ⏰</label>
+    <select id="time">
+      <option value="">Choose a time</option>
+      <option>10:00 AM</option><option>12:30 PM</option><option>2:00 PM</option>
+      <option>4:30 PM</option><option>6:00 PM</option><option>7:30 PM</option><option>9:00 PM</option>
+    </select>
+    <button class="pink-btn" onclick="setDate()">set the date! ♥</button>
+    <p class="error" id="error"></p>
+  </section>
+
+  <!-- FUNNY FEE -->
+  <section class="card" id="screen3">
+    <div class="tiny-icon">💌</div>
+    <p class="eyebrow">date agreement™</p>
+    <h1>one small fee 😭</h1>
+    <p class="sub">Just kidding! This is the dramatic part of the surprise.</p>
+    <div class="fee-box">
+      <div><strong>Date Agreement™</strong><span>one-time fee • absolutely worth it</span></div>
+      <strong class="amount">₹499</strong>
+    </div>
+    <div class="selected-date" id="selectedDate"></div>
+    <button class="pink-btn" onclick="niceTry()">pay ₹499 & confirm 💸</button>
+    <button class="back-btn" onclick="showScreen(2)">go back</button>
+  </section>
+
+  <section class="card" id="screen4">
+    <div class="success-icon">😂💗</div>
+    <p class="eyebrow">GOTCHA</p>
+    <h1>Nice try! 😭</h1>
+    <p class="sub">No real payment. The date is confirmed for free. 💗</p>
+    <div class="confirmed" id="confirmedDate"></div>
+    <button class="pink-btn" onclick="restart()">start over ↻</button>
+  </section>
+
+</div>
+<footer>made with a little bit of code & a lot of courage 💗</footer>
+<script src="script.js"></script>
+</body>
+</html>
